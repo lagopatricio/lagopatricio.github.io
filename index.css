@@ -3,6 +3,10 @@
   src: url(./assets/fonts/Roboto/Roboto-Bold.ttf)
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 body{
   display: flex;
   justify-content: space-between;
@@ -127,13 +131,12 @@ nav label ul a{
     transform: translateX(50%);
     overflow: scroll;
     transition: transform 0.5s ease-in-out;
-    font-size: 48px;
-  }
-
-  ::-webkit-scrollbar{
-    display: none;
   }
   
+  nav label ul a{
+    font-size: 2.5rem;
+  }
+
   nav label input[type="checkbox"]:checked ~ span:nth-of-type(1){
     transform-origin:bottom;
     transform:rotatez(45deg) translate(5px,2px)
