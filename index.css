@@ -27,12 +27,10 @@ body{
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  background-image: url(./assets/images/collection-web.webp);
-  background-size: cover;
-  background-position: center;
+  background-color: black;
 }
 
-img{
+.logo{
   padding: 20px 0 0 20px;
   margin-right: 40px;
   width: 185px;
@@ -61,7 +59,11 @@ nav label ul{
   padding-right: 20px;
 }
 
-nav label ul a{
+nav label ul div img{
+  display: none;
+}
+
+nav label ul div a{
   font-family: Raleway-Light;
   text-decoration: none;
   color: white;
@@ -72,7 +74,7 @@ nav label ul a{
 }
 
 @media (max-width: 850px) {
-  img{
+  .logo{
     content: url(./assets/logo-vertical.png);
     width: 74px;
     height: auto;
@@ -84,17 +86,20 @@ nav label ul a{
     overflow: hidden;
   }
 
-  img{
+  .logo{
+    position: absolute;
     content: url(./assets/logo-vertical.png);
     width: 74px;
     height: 52px;
+    z-index: -9999;
   }
 
   nav{
     flex-flow: column;
-    height: 100vh;
     gap: 15px;
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
   }
 
   nav svg{
@@ -103,6 +108,7 @@ nav label ul a{
   }
 
   nav label{
+    position: relative;
     display: flex;
     flex-direction:column;
     width:35px;
@@ -151,15 +157,29 @@ nav label ul a{
     padding-right: 0;
     background-color: rgba(20,20,20,0.8);
     margin-top: -30px;
-    gap: 15px;
+    gap: 20px;
   }
 
-  nav label ul a{
+  nav label ul div{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+  }
+
+  nav label ul div img{
+    display: initial;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  nav label ul div a{
     font-family: Raleway-ELight;
     background-color: transparent;
     font-size: 2rem;
-    border-bottom: 1px solid white;
     border-radius: 0;
+    padding: 0 0 0 15px;
   }
   
   nav label input[type="checkbox"]:checked ~ span:nth-of-type(1){
