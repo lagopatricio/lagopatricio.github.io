@@ -1,0 +1,157 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-.ttf);
+}
+
+body{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/images/collection-web.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+img{
+  padding: 20px 0 0 20px;
+  margin-right: 40px;
+  width: 185px;
+  height: auto;
+}
+
+nav{
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+
+nav label input{
+  display: none;
+}
+
+nav label span{
+  display: none;
+}
+
+nav label ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 10px;
+}
+
+nav label ul a{
+  font-family: Roboto;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(20,20,20,0.8);
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 850px) {
+  img{
+    content: url(./assets/logo-vertical.png);
+    width: 74px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body{
+    overflow: hidden;
+  }
+
+  img{
+    content: url(./assets/logo-vertical.png);
+    width: 74px;
+    height: 52px;
+  }
+
+  nav{
+    flex-flow: column;
+    height: 100vh;
+    gap: 15px;
+    overflow: hidden;
+  }
+
+  nav svg{
+    display: initial;
+    color: white;
+  }
+
+  nav label{
+    display: flex;
+    flex-direction:column;
+    width:35px;
+    cursor:pointer;
+    margin-top: 30px;
+  }
+
+  nav label input[type="checkbox"]{
+    display:none;
+  }
+  
+  nav label span{
+    display: initial;
+    background: #fff;
+    border-radius:10px;
+    height:4px;
+    margin: 4px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+   
+   
+  nav label span:nth-of-type(1){
+    width:50%;
+     
+  }
+   
+  nav label span:nth-of-type(2){
+    width:100%;
+  }
+   
+   
+  nav label span:nth-of-type(3){
+    width:75%;
+  }
+
+  nav label ul{
+    height: 64vh;
+    flex-flow: column;
+    position: absolute;
+    top: 90px;
+    transform: translateX(50%);
+    overflow: scroll;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  nav label input[type="checkbox"]:checked ~ span:nth-of-type(1){
+    transform-origin:bottom;
+    transform:rotatez(45deg) translate(5px,2px)
+  }
+   
+   
+  nav label input[type="checkbox"]:checked ~ span:nth-of-type(2){
+    transform-origin:top;
+    transform:rotatez(-45deg)
+  }
+   
+   
+  nav label input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    transform-origin:bottom;
+    width:50%;
+    transform: translate(14px,-7px) rotatez(45deg);
+  }
+
+  nav label input[type="checkbox"]:checked ~ ul{
+    transform: translateX(-80%);
+  }
+}
