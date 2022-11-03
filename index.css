@@ -127,6 +127,7 @@ nav label ul a{
     transform: translateX(50%);
     overflow: scroll;
     transition: transform 0.5s ease-in-out;
+    font-size: 48px;
   }
 
   ::-webkit-scrollbar{
