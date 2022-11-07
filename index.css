@@ -9,7 +9,10 @@
 }
 
 body,
-h1{
+h1,
+h5,
+h6,
+p{
   margin: 0;
   padding: 0;
 }
@@ -35,31 +38,229 @@ div .filter{
   background-color: rgba(44, 44, 44, 0.5);
 }
 
-div div .slide{
+div div .wrapper{
   display: grid;
   grid-template-areas: 
-  "title title"
-  "image list";
+  "title title title"
+  "card card2 card3";
   grid-template-rows: auto 1fr;
-  grid-template-columns: auto 1fr;
   row-gap: 2rem;
-  column-gap: 3rem;
+  column-gap: 3%;
   height: 85%;
   width: 70%;
-  margin-bottom: 20px;
-  color: white;
+  margin-bottom: 1.5rem;
 }
 
-div div .slide h1{
+div div .wrapper .textBG{
+  position: absolute;
+  z-index: -1;
+  width: 80vw;
+  object-fit: cover;
+  top: -100px;
+}
+
+div div .wrapper .title{
   grid-area: title;
 }
 
-div div .slide img{
-  grid-area: image;
-  width: 80%;
-  height: auto;
+div div .wrapper .title h1{
+  font-family: Raleway-Thin;
+  text-align: center;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px black;
+  font-size: 3vw;
 }
 
-div div .slide ul{
-  grid-area: list;
+div div .wrapper div:nth-of-type(2){
+  grid-area: card;
+}
+
+div div .wrapper div:nth-of-type(3){
+  grid-area: card2;
+}
+
+div div .wrapper div:nth-of-type(4){
+  grid-area: card3;
+}
+
+div div .wrapper .card{
+  display: grid;
+  grid-template-areas: 
+    'header'
+    'image'
+    'description';
+  grid-template-rows: 10vh auto 20vh;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgb(80, 80, 80);
+  transition: transform 0.4s ease-in-out;
+  justify-items: center;
+  height: fit-content;
+  padding: 5px 10px;
+}
+
+div div .wrapper .card:hover{
+  transform: scale(1.05);
+}
+
+div div .wrapper .card .header{
+  grid-area: header;
+  justify-self: start;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+  align-self: center;
+  padding-left: 10px;
+}
+
+div div .wrapper .card .header img{
+  width: 5vw;
+}
+
+div div .wrapper .card .header .title{
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  padding-left: 1vw;
+}
+
+div div .wrapper .card .header .title h5{
+  font-size: 1.4vw;
+}
+
+div div .wrapper .card:nth-of-type(3) .header .title h5{
+  font-size: 1.1vw;
+}
+
+div div .wrapper .card:nth-of-type(3) .header .title h6{
+  font-size: 0.9vw;
+}
+
+div div .wrapper .card .header .title h6{
+  font-size: 1vw;
+}
+
+div div .wrapper .card .header + img{
+  grid-area: image;
+  height: 30vh;
+}
+
+div div .wrapper .card:nth-of-type(3) .header + img{
+}
+
+div div .wrapper .card p{
+  grid-area: description;
+  font-size: 1.2vw;
+  text-align: center;
+  height: fit-content;
+  align-self: center;
+  width: 95%;
+}
+
+@media (max-width: 1000px) {
+  div div .wrapper{
+    grid-template-areas: 
+      'title'
+      'card'
+      'card2'
+      'card3';
+    grid-template-rows: auto 1fr 1fr 1fr;
+    row-gap: 3vh;
+    height: 90%;
+  }
+
+  div div .wrapper .card{
+    grid-template-areas: 
+      'image header'
+      'image description';
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    padding: 10px 10px;
+  }
+
+  div div .wrapper .card .header{
+    justify-content: center;
+  }
+
+  div div .wrapper .card .header .title h5{
+    font-size: 1.1rem;
+  }
+
+  div div .wrapper .card .header .title h6{
+    font-size: 0.7rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h5{
+    font-size: 1.1rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h6{
+    font-size: 0.7rem;
+  }
+
+  div div .wrapper .card .header + img{
+    align-self: center;
+    height: 20vh;
+  }
+
+  div div .wrapper .card p{
+    font-size: 0.9rem;
+  }
+
+@media (max-width: 600px){
+  div div .wrapper .card .header .title h5{
+    font-size: 1.1rem;
+  }
+
+  div div .wrapper .card .header .title h6{
+    font-size: 0.7rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h5{
+    font-size: 1rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h6{
+    font-size: 0.6rem;
+  }
+
+  div div .wrapper .card .header + img{
+    height: 18vh;
+  }
+
+  div div .wrapper .card p{
+    font-size: 0.8rem;
+  }
+
+@media (max-width: 450px){
+  div div .wrapper .card .header .title h5{
+    font-size: 0.8rem;
+  }
+
+  div div .wrapper .card .header .title h6{
+    font-size: 0.5rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h5{
+    font-size: 0.7rem;
+  }
+
+  div div .wrapper .card:nth-of-type(3) .header .title h6{
+    font-size: 0.5rem;
+  }
+
+  div div .wrapper .card .header + img{
+    height: 16vh;
+  }
+
+  div div .wrapper .card p{
+    font-size: 0.7rem;
+  }
+}
+}
 }
