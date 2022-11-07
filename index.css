@@ -213,6 +213,10 @@ div div .wrapper .card p{
   }
 
 @media (max-width: 600px){
+  div div .wrapper .mainTitle h1{
+    font-size: 5vw;
+  }
+  
   div div .wrapper .card .header .title h5{
     font-size: 1.1rem;
   }
@@ -230,7 +234,7 @@ div div .wrapper .card p{
   }
 
   div div .wrapper .card .header + img{
-    height: 18vh;
+    height: 15vh;
   }
 
   div div .wrapper .card p{
@@ -255,7 +259,7 @@ div div .wrapper .card p{
   }
 
   div div .wrapper .card .header + img{
-    height: 16vh;
+    height: 12vh;
   }
 
   div div .wrapper .card p{
