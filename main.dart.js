@@ -95618,7 +95618,7 @@ a0y(a,b){var s=0,r=A.U(t.Yy),q,p,o,n,m
 var $async$xE=A.V(function(c,d){if(c===1)return A.R(d,r)
 while(true)switch(s){case 0:n=t.N
 s=3
-return A.Q(A.aS_(A.ha("http://reropa.es/api/getuser/"+b),A.aN(["Authorization","Bearer "+a],n,n)),$async$xE)
+return A.Q(A.aS_(A.ha("https://reropa.es/api/getuser/"+b),A.aN(["Authorization","Bearer "+a],n,n)),$async$xE)
 case 3:m=d
 n=m.e
 p=A.tR(A.tM(n).c.a.h(0,"charset"))
@@ -95638,7 +95638,7 @@ arE(a){var s=0,r=A.U(t.DF),q,p,o,n,m,l,k,j
 var $async$Cc=A.V(function(b,c){if(b===1)return A.R(c,r)
 while(true)switch(s){case 0:A.ix("LoginRequest body: "+a.f2().k(0))
 s=3
-return A.Q(A.aJx(A.ha("http://reropa.es/api/login"),a.f2()),$async$Cc)
+return A.Q(A.aJx(A.ha("https://reropa.es/api/login"),a.f2()),$async$Cc)
 case 3:p=c
 o=p.e
 n=A.tR(A.tM(o).c.a.h(0,"charset"))
@@ -95661,9 +95661,9 @@ atH(a,b){var s=0,r=A.U(t.y),q,p,o,n,m,l
 var $async$pE=A.V(function(c,d){if(c===1)return A.R(d,r)
 while(true)switch(s){case 0:l=A.aN(["name",b.d,"last_name",b.e,"email",b.a,"password",b.c,"usertype",b.b],t.N,t.C)
 A.lE("enviando "+b.f2().k(0))
-A.lE("url http://reropa.es/api/register")
+A.lE("url https://reropa.es/api/register")
 s=3
-return A.Q(A.aJx(A.ha("http://reropa.es/api/register"),l),$async$pE)
+return A.Q(A.aJx(A.ha("https://reropa.es/api/register"),l),$async$pE)
 case 3:p=d
 o=p.e
 n=A.tR(A.tM(o).c.a.h(0,"charset"))
@@ -95678,7 +95678,7 @@ BC(a){return this.ap8(a)},
 ap8(a){var s=0,r=A.U(t.uh),q,p,o,n,m
 var $async$BC=A.V(function(b,c){if(b===1)return A.R(c,r)
 while(true)switch(s){case 0:s=3
-return A.Q(A.aS_(A.ha("http://reropa.es/api/forgotpass/"+a),null),$async$BC)
+return A.Q(A.aS_(A.ha("https://reropa.es/api/forgotpass/"+a),null),$async$BC)
 case 3:p=c
 o=B.bV.oN(0,A.tR(A.tM(p.e).c.a.h(0,"charset")).dM(0,p.w),null)
 n=J.aM(o)
@@ -95693,7 +95693,7 @@ Dh(a,b){return this.auJ(a,b)},
 auJ(a,b){var s=0,r=A.U(t.j9),q,p,o,n
 var $async$Dh=A.V(function(c,d){if(c===1)return A.R(d,r)
 while(true)switch(s){case 0:s=3
-return A.Q(A.aJx(A.ha("http://reropa.es/api/updatePassword/"+a+"/"+b),null),$async$Dh)
+return A.Q(A.aJx(A.ha("https://reropa.es/api/updatePassword/"+a+"/"+b),null),$async$Dh)
 case 3:p=d
 o=B.bV.oN(0,A.tR(A.tM(p.e).c.a.h(0,"charset")).dM(0,p.w),null)
 n=J.aM(o)
